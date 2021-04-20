@@ -1,6 +1,6 @@
 package com.sanvalero.libreria.dao;
 
-import com.sanvalero.libreria.domain.Musica;
+import com.sanvalero.libreria.domain.Pelicula;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -11,33 +11,34 @@ import java.util.ArrayList;
  * @author María Carmen Jiménez Sampériz - DAW
  */
 
-    public class MusicaDAO {
+    public class PeliculaDAO {
    
     private Conexion conexion;
     //graciss a esto podemos hablar directamente con la base de datos
-    public MusicaDAO (Conexion conexion){
+    public PeliculaDAO (Conexion conexion){
         this.conexion = conexion;
     }
     
-    public ArrayList<Musica> verAlbum()throws SQLException{
-    String sql= "SELECT NOMBRE_ALBUM, NOMBRE_GRUPO, DISCOGRAFIA FROM MUSICA";
+    
+    public ArrayList<Pelicula> verPelicula()throws SQLException{
+    String sql= "SELECT NOMBRE_PELICULA, DIRECTOR, GENERO FROM PELICULA";
     
     
-    ArrayList<Musica> musicas = new ArrayList<>();
+    ArrayList<Pelicula> peliculas = new ArrayList<>();
         
         PreparedStatement sentencia = conexion.getConexion().prepareStatement(sql);
         ResultSet resultado = sentencia.executeQuery();
         while (resultado.next()) {
-            Musica musica = new Musica();
-            musica.setNombreAlbum(resultado.getString(1));
-            musica.setNombreGrupo(resultado.getString(2));
-            musica.setDiscografica(resultado.getString(3));
+            Pelicula pelicula = new Pelicula();
+            pelicula.setNombrePelicula(resultado.getString(1));
+            pelicula.setDirector(resultado.getString(2));
+            pelicula.setGenero(resultado.getString(3));
             
             
             
-            musicas.add(musica);
+            peliculas.add(pelicula);
         }
-        return musicas;
+        return peliculas;
     }
  }
     
