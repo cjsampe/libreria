@@ -1,7 +1,6 @@
-
 package com.sanvalero.libreria.dao;
 
-import com.sanvalero.libreria.domain.Libro;
+import com.sanvalero.libreria.domain.Musica;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -11,34 +10,34 @@ import java.util.ArrayList;
  *
  * @author María Carmen Jiménez Sampériz - DAW
  */
-public class LibroDAO {
+
+    public class MusicaDAO {
    
     private Conexion conexion;
     //graciss a esto podemos hablar directamente con la base de datos
-    public LibroDAO (Conexion conexion){
+    public MusicaDAO (Conexion conexion){
         this.conexion = conexion;
     }
     
-    public ArrayList<Libro> verLibro()throws SQLException{
-    String sql= "SELECT NOMBRE_TITULO, DIRECTOR, GENERO FROM LIBRO";
+    public ArrayList<Musica> verAlbum()throws SQLException{
+    String sql= "SELECT NOMBRE_ALBUM, NOMBRE_GRUPO, DISCOGRAFIA FROM MUSICA";
     
     
-    ArrayList<Libro> libros = new ArrayList<>();
+    ArrayList<Musica> musicas = new ArrayList<>();
         
         PreparedStatement sentencia = conexion.getConexion().prepareStatement(sql);
         ResultSet resultado = sentencia.executeQuery();
         while (resultado.next()) {
-            Libro libro = new Libro();
-            libro.setNombreTitulo(resultado.getString(1));
-            libro.setDirector(resultado.getString(2));
-            libro.setGenero(resultado.getString(3));
+            Musica musica = new Musica();
+            musica.setNombreAlbum(resultado.getString(1));
+            musica.setNombreGrupo(resultado.getString(2));
+            musica.setDiscografica(resultado.getString(3));
             
             
             
-            libros.add(libro);
+            musicas.add(musica);
         }
-        return libros;
-}
+        return musicas;
+    }
+ }
     
-}
-
