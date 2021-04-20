@@ -1,6 +1,7 @@
-/**
+package com.sanvalero.libreria.domain;
+/*
  *
- * @author Atramento
+ * @author María Carmen Jiménez Sampériz - DAW
  */
 public class Pelicula {
     
