@@ -1,7 +1,7 @@
-
+package com.sanvalero.libreria.domain;
 /**
  *
- * @author Carmen Jiménez Sampériz
+ * @author María Carmen Jiménez Sampériz - DAW
  */
 public class Libro {
     
