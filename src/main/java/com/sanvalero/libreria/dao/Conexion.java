@@ -14,8 +14,8 @@ public class Conexion {
     private Connection conexion;
     private final String DRIVER = "oracle.jdbc.driver.OracleDriver";
     private final String URL_CONEXION = "jdbc:oracle:thin:@localhost:1521/xe";
-    private final String USUARIO = " ";
-    private final String CONTRASENA = " ";
+    private final String USUARIO = "LIBROS";
+    private final String CONTRASENA = "LIBROS";
     //CONSTRUCTOR
     public Conexion(){
         
