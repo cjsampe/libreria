@@ -11,5 +11,3 @@ Se ha hecho:
 -SonarQube
 -Visulaización de rendimiento
 -Añadir un release del proyecto al repositorio
--Diseño diagrama de clases
--Diseñar una pagina web con github-pages
