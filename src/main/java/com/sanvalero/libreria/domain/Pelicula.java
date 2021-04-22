@@ -8,7 +8,7 @@ public class Pelicula {
     private String nombrePelicula;
     private String director;
     private float duracion;
-    private int año;
+    private int anio;
     private String genero;
     
     
@@ -40,12 +40,12 @@ public class Pelicula {
         this.duracion = duracion;
     }
 
-    public int getAño() {
-        return año;
+    public int getAnio() {
+        return anio;
     }
 
-    public void setAño(int año) {
-        this.año = año;
+    public void setAnio(int anio) {
+        this.anio = anio;
     }
 
     public String getGenero() {
