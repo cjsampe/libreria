@@ -6,10 +6,10 @@ package com.sanvalero.libreria.domain;
 public class Libro {
     
     private String nombreTitulo;
-    private String director;
+    private String escritor;
     private String genero;
-    private float duracion;
-    private int año;
+    private float paginas;
+    private int anio;
     
     public Libro(){
         
@@ -23,12 +23,12 @@ public class Libro {
         this.nombreTitulo = nombreTitulo;
     }
 
-    public String getDirector() {
-        return director;
+    public String getEscritor() {
+        return escritor;
     }
 
-    public void setDirector(String director) {
-        this.director = director;
+    public void setEscritor(String escritor) {
+        this.escritor = escritor;
     }
 
     public String getGenero() {
@@ -39,23 +39,28 @@ public class Libro {
         this.genero = genero;
     }
 
-    public float getDuracion() {
-        return duracion;
+    public float getPaginas() {
+        return paginas;
     }
 
-    public void setDuracion(float duracion) {
-        this.duracion = duracion;
+    public void setPaginas(float paginas) {
+        this.paginas = paginas;
     }
 
-    public int getAño() {
-        return año;
+    public int getAnio() {
+        return anio;
     }
 
-    public void setAño(int año) {
-        this.año = año;
+    public void setAnio(int anio) {
+        this.anio = anio;
     }
     
     
+    
+     @Override
+    public String toString() {
+        return "Libro{" + "nombreTitulo=" + nombreTitulo + ", escritor=" + escritor + ", genero=" + genero +  '}';
+    }
     
     
 }

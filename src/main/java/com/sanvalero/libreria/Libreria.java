@@ -7,6 +7,7 @@ import com.sanvalero.libreria.dao.PeliculaDAO;
 import com.sanvalero.libreria.domain.Libro;
 import com.sanvalero.libreria.domain.Musica;
 import com.sanvalero.libreria.domain.Pelicula;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -16,6 +17,7 @@ import java.util.Scanner;
  * @author María Carmen Jiménez Sampériz - DAW
  */
 public class Libreria {
+    
     private boolean salir;
     private Scanner teclado;
     private Conexion conexion;
@@ -29,8 +31,8 @@ public class Libreria {
         conexion = new Conexion();
         conexion.conectar();
         libroDAO = new LibroDAO(conexion);
-        peliculaDAO = new PeliculaDAO(conexion);
-        libroDAO = new LibroDAO(conexion);
+       // peliculaDAO = new PeliculaDAO(conexion);
+        //libroDAO = new LibroDAO(conexion);
     }
     
         public void ejecutar() throws SQLException{

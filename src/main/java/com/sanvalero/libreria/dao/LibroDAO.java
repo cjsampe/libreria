@@ -20,7 +20,7 @@ public class LibroDAO {
     }
     
     public ArrayList<Libro> verLibro()throws SQLException{
-    String sql= "SELECT NOMBRE_TITULO, DIRECTOR, GENERO FROM LIBRO";
+    String sql= "SELECT NOMBRE_TITULO, ESCRITOR, GENERO FROM LIBRO";
     
     
     ArrayList<Libro> libros = new ArrayList<>();
@@ -30,7 +30,7 @@ public class LibroDAO {
         while (resultado.next()) {
             Libro libro = new Libro();
             libro.setNombreTitulo(resultado.getString(1));
-            libro.setDirector(resultado.getString(2));
+            libro.setEscritor(resultado.getString(2));
             libro.setGenero(resultado.getString(3));
             
             
